@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siam Street — Premium Thai street food with bold flavors and authentic recipes rooted in Bangkok's vibrant culinary culture." />
+  <title>Siam Street — Authentic Thai Kitchen</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <header class="site-header" id="site-header" role="banner">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="#hero" class="nav-logo" aria-label="Siam Street home">
+        <span class="logo-thai">สยาม</span>
+        <span class="logo-en">SIAM STREET</span>
+      </a>
+
+      <!-- Dietary preference toggle -->
+      <div class="diet-toggle" id="diet-toggle" role="group" aria-label="Dietary preference filter">
+        <button class="diet-btn active" data-diet="all" aria-pressed="true">All</button>
+        <button class="diet-btn" data-diet="veg" aria-pressed="false">
+          <span class="diet-dot diet-dot--veg" aria-hidden="true"></span>Veg
+        </button>
+        <button class="diet-btn" data-diet="non-veg" aria-pressed="false">
+          <span class="diet-dot diet-dot--nonveg" aria-hidden="true"></span>Non-Veg
+        </button>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu" role="list">
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">Our Story</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Find Us</a></li>
+        <li><a href="#reservations" class="nav-link nav-cta">Reserve a Table</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="hero" aria-label="Hero section">
+      <div class="hero-bg" aria-hidden="true">
+        <!-- SVG pattern overlay -->
+        <svg class="hero-pattern" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+          <defs>
+            <pattern id="diag" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+              <line x1="0" y1="0" x2="0" y2="40" stroke="rgba(255,163,48,0.04)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#diag)"/>
+        </svg>
+      </div>
+
+      <div class="hero-content">
+        <p class="hero-eyebrow">Bangkok · Chiang Mai · Your City</p>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Bold.</span>
+          <span class="hero-title-line accent">Authentic.</span>
+          <span class="hero-title-line">Unapologetic.</span>
+        </h1>
+        <p class="hero-tagline">
+          Street food born in the alleys of Bangkok.<br />
+          Elevated for the table in front of you.
+        </p>
+        <div class="hero-actions">
+          <a href="#menu" class="btn btn-primary">Explore the Menu</a>
+          <a href="#reservations" class="btn btn-outline">Reserve a Table</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+
+      <!-- Comment of the day floating cards -->
+      <div class="hero-floating-badges" aria-label="Customer comments">
+        <div class="badge badge--1" data-layer="0">
+          <div class="badge-stars" aria-label="5 stars">★★★★★</div>
+          <p class="badge-quote">"The Pad Thai here is unlike anything I've had outside Bangkok."</p>
+          <span class="badge-author">— Priya M.</span>
+        </div>
+        <div class="badge badge--2" data-layer="1">
+          <div class="badge-stars" aria-label="5 stars">★★★★★</div>
+          <p class="badge-quote">"That green curry changed my entire relationship with food."</p>
+          <span class="badge-author">— James K.</span>
+        </div>
+        <div class="badge badge--3" data-layer="2">
+          <div class="badge-stars" aria-label="5 stars">★★★★★</div>
+          <p class="badge-quote">"Mango sticky rice for dessert — I dream about it still."</p>
+          <span class="badge-author">— Aiko T.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HIGHLIGHTS BAR ===================== -->
+    <section class="highlights-bar" aria-label="Restaurant highlights">
+      <div class="container">
+        <ul class="highlights-list" role="list">
+          <li class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">🌿</span>
+            <span class="highlight-text">Fresh Herbs Daily</span>
+          </li>
+          <li class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">🔥</span>
+            <span class="highlight-text">Made to Order</span>
+          </li>
+          <li class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">🌏</span>
+            <span class="highlight-text">Imported Spices</span>
+          </li>
+          <li class="highlight-item">
+            <span class="highlight-icon" aria-hidden="true">🥇</span>
+            <span class="highlight-text">Best Thai — City Award 2024</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================== MENU ===================== -->
+    <section class="menu-section" id="menu" aria-labelledby="menu-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">What We Serve</p>
+          <h2 class="section-title" id="menu-heading">The Menu</h2>
+          <p class="section-subtitle">Every dish tells a story from the streets of Thailand.</p>
+        </header>
+
+        <!-- Category Tabs -->
+        <div class="menu-tabs" role="tablist" aria-label="Menu categories">
+          <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="tab-starters" id="btn-starters" data-category="starters">Starters</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-mains" id="btn-mains" data-category="mains">Mains</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-desserts" id="btn-desserts" data-category="desserts">Desserts</button>
+          <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-beverages" id="btn-beverages" data-category="beverages">Beverages</button>
+        </div>
+
+        <!-- Starters -->
+        <div class="menu-panel active" id="tab-starters" role="tabpanel" aria-labelledby="btn-starters">
+          <div class="menu-empty" id="empty-starters" hidden aria-live="polite">
+            <span aria-hidden="true">🍽️</span>
+            <p>No starters match your dietary preference.</p>
+          </div>
+          <div class="menu-grid">
+
+            <!-- golden turmeric amber — chicken satay -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Satay Skewers">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d2200,#1e1200);" aria-label="Satay Skewers image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍢</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Chicken Satay</h3>
+                  <span class="menu-card-price">$12</span>
+                </div>
+                <p class="menu-card-desc">Grilled skewers marinated in lemongrass &amp; turmeric, served with peanut sauce and cucumber relish.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- fiery red-orange — tom yum -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Tom Yum Soup">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d0d00,#1e0800);" aria-label="Tom Yum Soup image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍲</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Tom Yum Goong</h3>
+                  <span class="menu-card-price">$14</span>
+                </div>
+                <p class="menu-card-desc">Classic hot &amp; sour prawn soup with galangal, kaffir lime leaves, and fresh chilli.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- crispy golden — spring rolls -->
+            <article class="menu-card" data-diet="veg" aria-label="Spring Rolls">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d1e00,#180f00);" aria-label="Spring Rolls image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥟</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Poh Pia Tod</h3>
+                  <span class="menu-card-price">$10</span>
+                </div>
+                <p class="menu-card-desc">Crispy fried spring rolls stuffed with glass noodles, cabbage, tofu, and wood-ear mushrooms. Sweet chilli dip.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- lime green — som tam papaya -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Green Papaya Salad">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#1a3d05,#0a1e00);" aria-label="Som Tam image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥗</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Som Tam</h3>
+                  <span class="menu-card-price">$11</span>
+                </div>
+                <p class="menu-card-desc">Green papaya salad pounded with dried shrimp, lime, palm sugar, fish sauce, and bird's eye chilli.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶🌶 Fiery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- creamy coconut ivory — tom kha -->
+            <article class="menu-card" data-diet="veg" aria-label="Mushroom Coconut Soup">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d2a1a,#1a180a);" aria-label="Tom Kha Hed image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍄</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Tom Kha Hed</h3>
+                  <span class="menu-card-price">$13</span>
+                </div>
+                <p class="menu-card-desc">Silky coconut milk soup with oyster &amp; shiitake mushrooms, galangal, lemongrass, and kaffir lime. Rich and aromatic.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- deep golden brown — Thai fried chicken -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Thai Fried Chicken">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d2800,#1e1400);" aria-label="Gai Tod image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍗</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Gai Tod</h3>
+                  <span class="menu-card-price">$13</span>
+                </div>
+                <p class="menu-card-desc">Double-fried crispy chicken marinated in lemongrass, fish sauce, and white pepper. Served with sticky rice and Nam Jim.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- fresh herb green — larb minced salad -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Minced Chicken Herb Salad">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#1a3a08,#0a1e05);" aria-label="Larb Gai image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥬</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Larb Gai</h3>
+                  <span class="menu-card-price">$13</span>
+                </div>
+                <p class="menu-card-desc">Northern-style minced chicken salad with toasted rice powder, shallots, mint, and lime dressing. Light and aromatic.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- dark leaf wrap green — miang kham -->
+            <article class="menu-card" data-diet="veg" aria-label="Leaf Wraps">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#0f2d10,#051808);" aria-label="Miang Kham image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🌿</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Miang Kham</h3>
+                  <span class="menu-card-price">$11</span>
+                </div>
+                <p class="menu-card-desc">Betel leaf wraps loaded with toasted coconut, lime, ginger, shallot, and chilli. Finished with sweet palm sugar sauce.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-panel" id="tab-mains" role="tabpanel" aria-labelledby="btn-mains">
+          <div class="menu-empty" id="empty-mains" hidden aria-live="polite">
+            <span aria-hidden="true">🍽️</span>
+            <p>No mains match your dietary preference.</p>
+          </div>
+          <div class="menu-grid">
+
+            <!-- golden tamarind amber — prawn pad thai -->
+            <article class="menu-card featured" data-diet="egg" aria-label="Pad Thai — Chef's Special">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d2d00,#1e1800);" aria-label="Pad Thai image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍜</span>
+                <span class="menu-card-badge">Chef's Special</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Pad Thai Goong Sod</h3>
+                  <span class="menu-card-price">$22</span>
+                </div>
+                <p class="menu-card-desc">Wok-tossed rice noodles with jumbo tiger prawns, egg, bean sprouts, tamarind glaze, crushed peanuts.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- emerald green — green curry -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Green Curry">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#0a2d10,#051808);" aria-label="Green Curry image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍛</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Gaeng Keow Wan</h3>
+                  <span class="menu-card-price">$20</span>
+                </div>
+                <p class="menu-card-desc">Silky green curry with coconut milk, Thai eggplant, bamboo shoots, and chicken. Rich and aromatic.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- rich chocolate brown — massaman beef -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Massaman Curry">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d1400,#1a0a00);" aria-label="Massaman Curry image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥘</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Massaman Nuea</h3>
+                  <span class="menu-card-price">$24</span>
+                </div>
+                <p class="menu-card-desc">Slow-braised beef cheek in rich Massaman curry with potatoes, caramelised onion, and roasted peanuts.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- dark chilli red — basil pork stir-fry -->
+            <article class="menu-card" data-diet="egg" aria-label="Basil Stir-Fry">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d0e00,#1e0800);" aria-label="Pad Kra Pao image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🫕</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Pad Kra Pao Moo</h3>
+                  <span class="menu-card-price">$18</span>
+                </div>
+                <p class="menu-card-desc">Minced pork stir-fried with holy basil, oyster sauce, fish sauce, and chilli. Topped with crispy fried egg.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--spicy">🌶🌶🌶 Fiery</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- charred deep red — ribeye -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Crying Tiger Beef">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d0800,#1e0500);" aria-label="Crying Tiger image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥩</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Suea Rong Hai</h3>
+                  <span class="menu-card-price">$28</span>
+                </div>
+                <p class="menu-card-desc">Chargrilled 200g ribeye with toasted rice, dried chilli dipping sauce, and crisp fresh herbs.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ocean teal — steamed fish -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Steamed Fish">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#003d2a,#001e14);" aria-label="Pla Neung image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🐟</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Pla Neung Manao</h3>
+                  <span class="menu-card-price">$26</span>
+                </div>
+                <p class="menu-card-desc">Whole steamed barramundi with garlic, bird's eye chilli, fresh lime, and fish sauce. Served table-side.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- amber-gold veg noodle — pad thai jay -->
+            <article class="menu-card" data-diet="veg" aria-label="Veg Pad Thai">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d2a00,#1a1800);" aria-label="Pad Thai Jay image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥦</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Pad Thai Jay</h3>
+                  <span class="menu-card-price">$17</span>
+                </div>
+                <p class="menu-card-desc">Vegan Pad Thai with crispy tofu, rice noodles, bean sprouts, tamarind glaze, and crushed peanuts. No egg, no fish sauce.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- light emerald — veg green curry -->
+            <article class="menu-card" data-diet="veg" aria-label="Tofu Green Curry">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#0a2d15,#051a0a);" aria-label="Tofu Green Curry image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍃</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Gaeng Keow Wan Jay</h3>
+                  <span class="menu-card-price">$18</span>
+                </div>
+                <p class="menu-card-desc">Vegan green curry with crispy tofu, Thai eggplant, bamboo shoots, and coconut milk. Fragrant and bold.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- golden fried rice — khao pad -->
+            <article class="menu-card" data-diet="egg" aria-label="Thai Fried Rice">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d3000,#1e1800);" aria-label="Khao Pad image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍚</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Khao Pad Goong</h3>
+                  <span class="menu-card-price">$19</span>
+                </div>
+                <p class="menu-card-desc">Thai-style prawn fried rice with jasmine rice, egg, Chinese broccoli, oyster sauce, and fresh lime.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- dark soy brown — wide noodles -->
+            <article class="menu-card" data-diet="egg" aria-label="Wide Rice Noodles">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#1a1200,#0d0a00);" aria-label="Pad See Ew image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍝</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Pad See Ew</h3>
+                  <span class="menu-card-price">$20</span>
+                </div>
+                <p class="menu-card-desc">Caramelised wide rice noodles wok-tossed with beef, egg, Chinese broccoli, and sweet dark soy sauce.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--spicy">🌶 Mild</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- deep red curry — panang -->
+            <article class="menu-card" data-diet="non-veg" aria-label="Panang Curry">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d1500,#1e0a00);" aria-label="Panang Curry image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🫙</span>
+                <span class="diet-indicator diet-indicator--nonveg" aria-label="Non-vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Panang Nuea</h3>
+                  <span class="menu-card-price">$23</span>
+                </div>
+                <p class="menu-card-desc">Thick, creamy Panang curry with slow-cooked beef, kaffir lime leaves, and a hint of peanut. Deeply rich.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--spicy">🌶🌶 Hot</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-panel" id="tab-desserts" role="tabpanel" aria-labelledby="btn-desserts">
+          <div class="menu-empty" id="empty-desserts" hidden aria-live="polite">
+            <span aria-hidden="true">🍽️</span>
+            <p>No desserts match your dietary preference.</p>
+          </div>
+          <div class="menu-grid">
+
+            <!-- mango gold — sticky rice -->
+            <article class="menu-card featured" data-diet="veg" aria-label="Mango Sticky Rice">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d2e00,#1e1800);" aria-label="Mango Sticky Rice image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥭</span>
+                <span class="menu-card-badge">Fan Favourite</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Khao Niew Mamuang</h3>
+                  <span class="menu-card-price">$12</span>
+                </div>
+                <p class="menu-card-desc">Ripe Ataulfo mango with warm coconut sticky rice, sweet coconut cream, and toasted sesame seeds.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- cool ocean teal — coconut ice cream -->
+            <article class="menu-card" data-diet="veg" aria-label="Coconut Ice Cream">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#003a3a,#001e1e);" aria-label="Coconut Ice Cream image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍦</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">I-Tim Kati</h3>
+                  <span class="menu-card-price">$9</span>
+                </div>
+                <p class="menu-card-desc">Homemade coconut ice cream served in a coconut shell with roasted peanuts and sweet corn.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- pandan green — custard -->
+            <article class="menu-card" data-diet="egg" aria-label="Pandan Custard">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#0a2d10,#051808);" aria-label="Pandan Custard image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍮</span>
+                <span class="diet-indicator diet-indicator--egg" aria-label="Contains egg"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Sangkaya Bai Toey</h3>
+                  <span class="menu-card-price">$10</span>
+                </div>
+                <p class="menu-card-desc">Steamed pandan-infused coconut custard served with fresh Thai bread for dipping.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">V</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- deep purple — black sesame balls -->
+            <article class="menu-card" data-diet="veg" aria-label="Black Sesame Balls">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#200020,#100010);" aria-label="Black Sesame Balls image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">⚫</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Bua Loy Nga Dam</h3>
+                  <span class="menu-card-price">$9</span>
+                </div>
+                <p class="menu-card-desc">Chewy glutinous rice balls filled with black sesame paste, floating in warm ginger coconut broth.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- ruby red — water chestnut rubies -->
+            <article class="menu-card" data-diet="veg" aria-label="Water Chestnut Rubies">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d0820,#1e0510);" aria-label="Tab Tim Krob image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">💎</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Tab Tim Krob</h3>
+                  <span class="menu-card-price">$10</span>
+                </div>
+                <p class="menu-card-desc">Crimson water chestnuts in jasmine-scented coconut milk with crushed ice. A stunning Thai classic.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- layered violet — khanom chan -->
+            <article class="menu-card" data-diet="veg" aria-label="Layered Pandan Jelly">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#1e003d,#0f001e);" aria-label="Khanom Chan image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🟩</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Khanom Chan</h3>
+                  <span class="menu-card-price">$8</span>
+                </div>
+                <p class="menu-card-desc">Nine-layer steamed pandan and coconut jelly. Delicately sweet, silky, and beautifully presented.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Beverages -->
+        <div class="menu-panel" id="tab-beverages" role="tabpanel" aria-labelledby="btn-beverages">
+          <div class="menu-empty" id="empty-beverages" hidden aria-live="polite">
+            <span aria-hidden="true">🍽️</span>
+            <p>No beverages match your dietary preference.</p>
+          </div>
+          <div class="menu-grid">
+
+            <!-- Thai tea orange — cha yen -->
+            <article class="menu-card" data-diet="veg" aria-label="Thai Iced Tea">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d1800,#1e0c00);" aria-label="Thai Iced Tea image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🧋</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Cha Yen</h3>
+                  <span class="menu-card-price">$6</span>
+                </div>
+                <p class="menu-card-desc">Classic Thai orange tea brewed strong with star anise and condensed milk over crushed ice.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--v">V</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- deep indigo purple — butterfly pea -->
+            <article class="menu-card featured" data-diet="veg" aria-label="Butterfly Pea Lemonade">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#1a0050,#0a0028);" aria-label="Butterfly Pea Lemonade image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">💜</span>
+                <span class="menu-card-badge">Signature</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Dok Anchan Lemonade</h3>
+                  <span class="menu-card-price">$7</span>
+                </div>
+                <p class="menu-card-desc">Colour-changing butterfly pea flower lemonade with lychee syrup. A visual and flavour experience.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- pandan forest green — coconut cooler -->
+            <article class="menu-card" data-diet="veg" aria-label="Pandan Coconut Cooler">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#003d20,#001e10);" aria-label="Pandan Coconut Cooler image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥥</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Nam Kati Bai Toey</h3>
+                  <span class="menu-card-price">$7</span>
+                </div>
+                <p class="menu-card-desc">Fresh coconut water blended with pandan leaves, mint, and a hint of lime. Naturally refreshing.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- golden lager amber — Singha -->
+            <article class="menu-card" data-diet="veg" aria-label="Singha Beer">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d2800,#1a1600);" aria-label="Singha Beer image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍺</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Singha Lager</h3>
+                  <span class="menu-card-price">$8</span>
+                </div>
+                <p class="menu-card-desc">Thailand's premium lager. Crisp, clean, and the perfect companion for spicy dishes.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- lemongrass yellow-green — mocktail -->
+            <article class="menu-card" data-diet="veg" aria-label="Lemongrass Ginger Mocktail">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d2d00,#1a1a00);" aria-label="Lemongrass Mocktail image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍹</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Takrai Khing</h3>
+                  <span class="menu-card-price">$7</span>
+                </div>
+                <p class="menu-card-desc">Muddled lemongrass and ginger mocktail with honey, lime, and sparkling water. Bright and aromatic.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- mango orange — smoothie -->
+            <article class="menu-card" data-diet="veg" aria-label="Mango Smoothie">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#3d2500,#1e1400);" aria-label="Mango Smoothie image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🥭</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Nam Mamuang Yen</h3>
+                  <span class="menu-card-price">$6</span>
+                </div>
+                <p class="menu-card-desc">Chilled Alphonso mango smoothie with a touch of cardamom and lime. Sweet, creamy, tropical.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">V</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- fresh herb green — basil lemonade -->
+            <article class="menu-card" data-diet="veg" aria-label="Thai Basil Lemonade">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#0a2d10,#051808);" aria-label="Thai Basil Lemonade image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🌿</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Manao Bai Horapa</h3>
+                  <span class="menu-card-price">$7</span>
+                </div>
+                <p class="menu-card-desc">Fresh lemonade shaken with Thai basil, honey, and a pinch of sea salt. Herby, bright, and refreshing.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- deep tamarind brown — tamarind soda -->
+            <article class="menu-card" data-diet="veg" aria-label="Tamarind Soda">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d1500,#1a0a00);" aria-label="Tamarind Soda image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🟤</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Nam Makham Soda</h3>
+                  <span class="menu-card-price">$6</span>
+                </div>
+                <p class="menu-card-desc">House-made tamarind syrup with sparkling water, palm sugar, and a whisper of dried chilli. Tangy and complex.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                  <span class="tag tag--v">VG</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- cool amber — Chang beer -->
+            <article class="menu-card" data-diet="veg" aria-label="Chang Beer">
+              <div class="menu-card-img" style="background:linear-gradient(135deg,#2d2200,#1a1400);" aria-label="Chang Beer image placeholder">
+                <span class="menu-card-emoji" aria-hidden="true">🍻</span>
+                <span class="diet-indicator diet-indicator--veg" aria-label="Vegetarian"></span>
+              </div>
+              <div class="menu-card-body">
+                <div class="menu-card-top">
+                  <h3 class="menu-card-name">Chang Export</h3>
+                  <span class="menu-card-price">$8</span>
+                </div>
+                <p class="menu-card-desc">Thailand's best-selling export lager. Smooth, slightly sweet malt finish — pairs perfectly with anything spicy.</p>
+                <div class="menu-card-tags">
+                  <span class="tag tag--gf">GF</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="menu-legend" aria-label="Dietary key">
+          <p class="legend-label">Key:</p>
+          <ul class="legend-list" role="list">
+            <li><span class="diet-dot diet-dot--veg" aria-hidden="true"></span> Vegetarian</li>
+            <li><span class="diet-dot diet-dot--egg" aria-hidden="true"></span> Contains Egg</li>
+            <li><span class="diet-dot diet-dot--nonveg" aria-hidden="true"></span> Non-Vegetarian</li>
+            <li><span class="tag tag--gf">GF</span> Gluten Free</li>
+            <li><span class="tag tag--v">VG</span> Vegan</li>
+            <li><span class="tag tag--spicy">🌶</span> Spice Level</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about-section" id="about" aria-labelledby="about-heading">
+      <div class="container about-grid">
+
+        <div class="about-visual" aria-hidden="true">
+          <div class="about-img-stack">
+            <div class="about-img about-img--main">
+              <span class="about-img-emoji">👨‍🍳</span>
+              <div class="about-img-overlay"></div>
+            </div>
+            <div class="about-img about-img--accent">
+              <span class="about-img-emoji">🌿</span>
+            </div>
+          </div>
+          <div class="about-stat-card">
+            <span class="stat-number">12+</span>
+            <span class="stat-label">Years of Craft</span>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <p class="section-eyebrow">Our Story</p>
+          <h2 class="section-title" id="about-heading">Born on the Streets<br />of Bangkok</h2>
+          <p class="about-body">
+            Siam Street was born from a single obsession: the incredible, chaos-of-flavour street food that fills the alleys of Bangkok at midnight. Our founder, Chef Niran Chaiyaporn, grew up navigating those alleys — watching vendors turn a wok of smoke and heat into something transcendent.
+          </p>
+          <p class="about-body">
+            After training in both Bangkok and Paris, Niran returned with one mission — to carry those flavours faithfully into a modern dining experience. Every dish on our menu is tested against his memory of those streets: the tang of tamarind, the perfume of holy basil, the slow burn of fresh chilli.
+          </p>
+          <p class="about-body">
+            We source our herbs and spices from small growers in Chiang Rai and import our nam pla, kapi shrimp paste, and specialty chillis directly from Thailand. Nothing is compromised. Everything is earned.
+          </p>
+
+          <ul class="about-values" role="list" aria-label="Our values">
+            <li class="about-value">
+              <span class="value-icon" aria-hidden="true">🌱</span>
+              <div>
+                <strong>Seasonal &amp; Local Produce</strong>
+                <span>Partnered with regional farms for the freshest seasonal ingredients.</span>
+              </div>
+            </li>
+            <li class="about-value">
+              <span class="value-icon" aria-hidden="true">✈️</span>
+              <div>
+                <strong>Imported Authenticity</strong>
+                <span>Key pastes, sauces, and dried spices air-freighted from Thailand monthly.</span>
+              </div>
+            </li>
+            <li class="about-value">
+              <span class="value-icon" aria-hidden="true">♻️</span>
+              <div>
+                <strong>Zero Waste Kitchen</strong>
+                <span>Compost-first, plastic-free, and committed to sustainable hospitality.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="gallery-section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">A Feast for the Eyes</p>
+          <h2 class="section-title" id="gallery-heading">The Experience</h2>
+        </header>
+
+        <div class="gallery-grid" role="list" aria-label="Food and restaurant gallery">
+
+          <div class="gallery-item gallery-item--large" role="listitem" aria-label="Wok flames in the kitchen">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a0d05 0%, #3d1a00 100%);">
+              <span class="gallery-emoji" aria-hidden="true">🔥</span>
+              <p class="gallery-caption">The Wok</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" role="listitem" aria-label="Vibrant Pad Thai dish">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a1200 0%, #3d3000 100%);">
+              <span class="gallery-emoji" aria-hidden="true">🍜</span>
+              <p class="gallery-caption">Pad Thai</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" role="listitem" aria-label="Fresh Thai herbs and spices">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #051a08 0%, #0d3a12 100%);">
+              <span class="gallery-emoji" aria-hidden="true">🌿</span>
+              <p class="gallery-caption">Fresh Herbs</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" role="listitem" aria-label="Butterfly pea lemonade being poured">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #05051a 0%, #150a3d 100%);">
+              <span class="gallery-emoji" aria-hidden="true">💜</span>
+              <p class="gallery-caption">Dok Anchan</p>
+            </div>
+          </div>
+
+          <div class="gallery-item gallery-item--tall" role="listitem" aria-label="Restaurant interior at night">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);">
+              <span class="gallery-emoji" aria-hidden="true">🏮</span>
+              <p class="gallery-caption">The Room</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" role="listitem" aria-label="Mango sticky rice dessert">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #1a1205 0%, #3d2a00 100%);">
+              <span class="gallery-emoji" aria-hidden="true">🥭</span>
+              <p class="gallery-caption">Mango Rice</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" role="listitem" aria-label="Chef Niran at the stove">
+            <div class="gallery-placeholder" style="background: linear-gradient(135deg, #0d0505 0%, #2a0a0a 100%);">
+              <span class="gallery-emoji" aria-hidden="true">👨‍🍳</span>
+              <p class="gallery-caption">Chef Niran</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== RESERVATIONS ===================== -->
+    <section class="reservations-section" id="reservations" aria-labelledby="reservations-heading">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Come Dine With Us</p>
+          <h2 class="section-title" id="reservations-heading">Reserve a Table</h2>
+          <p class="section-subtitle">Book your table online. We'll confirm within 2 hours.</p>
+        </header>
+
+        <form class="reservation-form" id="reservation-form" novalidate aria-label="Table reservation form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-name" class="form-label">Full Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="res-name" name="name" class="form-input" placeholder="Jane Smith" required autocomplete="name" aria-required="true" />
+              <span class="form-error" id="res-name-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="res-email" class="form-label">Email Address <span aria-hidden="true">*</span></label>
+              <input type="email" id="res-email" name="email" class="form-input" placeholder="jane@example.com" required autocomplete="email" aria-required="true" />
+              <span class="form-error" id="res-email-error" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-date" class="form-label">Date <span aria-hidden="true">*</span></label>
+              <input type="date" id="res-date" name="date" class="form-input" required aria-required="true" />
+              <span class="form-error" id="res-date-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="res-time" class="form-label">Time <span aria-hidden="true">*</span></label>
+              <select id="res-time" name="time" class="form-input" required aria-required="true">
+                <option value="" disabled selected>Select a time</option>
+                <option value="17:00">5:00 PM</option>
+                <option value="17:30">5:30 PM</option>
+                <option value="18:00">6:00 PM</option>
+                <option value="18:30">6:30 PM</option>
+                <option value="19:00">7:00 PM</option>
+                <option value="19:30">7:30 PM</option>
+                <option value="20:00">8:00 PM</option>
+                <option value="20:30">8:30 PM</option>
+                <option value="21:00">9:00 PM</option>
+              </select>
+              <span class="form-error" id="res-time-error" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="res-guests" class="form-label">Number of Guests <span aria-hidden="true">*</span></label>
+              <select id="res-guests" name="guests" class="form-input" required aria-required="true">
+                <option value="" disabled selected>Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7+">7+ Guests (large group)</option>
+              </select>
+              <span class="form-error" id="res-guests-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label for="res-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="res-phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="form-group form-group--full">
+            <label for="res-notes" class="form-label">Special Requests</label>
+            <textarea id="res-notes" name="notes" class="form-input form-textarea" placeholder="Allergies, dietary needs, special occasions..." rows="3"></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit">Confirm Reservation</button>
+
+          <!-- Success message (hidden by default) -->
+          <div class="form-success" id="form-success" role="alert" aria-live="polite" hidden>
+            <span class="success-icon" aria-hidden="true">✅</span>
+            <div>
+              <strong>Reservation received!</strong>
+              <p>We'll email you a confirmation within 2 hours. See you soon!</p>
+            </div>
+          </div>
+        </form>
+
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT & HOURS ===================== -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-heading">
+      <div class="container contact-grid">
+
+        <div class="contact-info">
+          <p class="section-eyebrow">Find Us</p>
+          <h2 class="section-title" id="contact-heading">Hours &amp; Location</h2>
+
+          <address class="contact-details" aria-label="Restaurant address and contact">
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">📍</span>
+              <div>
+                <strong>Address</strong>
+                <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="contact-link" aria-label="Open in Google Maps">
+                  342 Lantern Lane, Midtown<br />
+                  New York, NY 10036
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+12125550199" class="contact-link">+1 (212) 555-0199</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <span class="contact-icon" aria-hidden="true">✉️</span>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:hello@siamstreet.com" class="contact-link">hello@siamstreet.com</a>
+              </div>
+            </div>
+          </address>
+
+          <div class="hours-table" aria-label="Opening hours">
+            <h3 class="hours-title">Opening Hours</h3>
+            <dl class="hours-list">
+              <div class="hours-row">
+                <dt>Monday – Thursday</dt>
+                <dd>5:00 PM – 10:00 PM</dd>
+              </div>
+              <div class="hours-row">
+                <dt>Friday</dt>
+                <dd>5:00 PM – 11:00 PM</dd>
+              </div>
+              <div class="hours-row hours-row--highlight">
+                <dt>Saturday</dt>
+                <dd>12:00 PM – 11:00 PM</dd>
+              </div>
+              <div class="hours-row hours-row--highlight">
+                <dt>Sunday</dt>
+                <dd>12:00 PM – 9:00 PM</dd>
+              </div>
+              <div class="hours-row hours-row--closed">
+                <dt>Public Holidays</dt>
+                <dd>Closed</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="social-links" aria-label="Social media links">
+            <a href="#" class="social-link" aria-label="Follow Siam Street on Instagram" rel="noopener">Instagram</a>
+            <a href="#" class="social-link" aria-label="Like Siam Street on Facebook" rel="noopener">Facebook</a>
+            <a href="#" class="social-link" aria-label="Read Siam Street reviews on Yelp" rel="noopener">Yelp</a>
+          </div>
+        </div>
+
+        <div class="contact-map" aria-label="Restaurant location map placeholder">
+          <div class="map-placeholder" role="img" aria-label="Map showing 342 Lantern Lane, Midtown New York">
+            <div class="map-inner">
+              <div class="map-pin" aria-hidden="true">📍</div>
+              <p class="map-address">342 Lantern Lane<br />Midtown, New York</p>
+              <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Open in Maps</a>
+            </div>
+            <!-- Decorative grid pattern -->
+            <svg class="map-grid" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
+              <defs>
+                <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,163,48,0.08)" stroke-width="1"/>
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)"/>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo" aria-label="Siam Street home">
+          <span class="logo-thai">สยาม</span>
+          <span class="logo-en">SIAM STREET</span>
+        </a>
+        <p class="footer-tagline">The streets of Bangkok. Right here.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="#menu" class="footer-link">Menu</a>
+        <a href="#about" class="footer-link">Our Story</a>
+        <a href="#gallery" class="footer-link">Gallery</a>
+        <a href="#reservations" class="footer-link">Reservations</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </nav>
+
+      <p class="footer-copy">
+        &copy; <span id="footer-year"></span> Siam Street Thai Kitchen. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- ===================== REVIEW BUTTON & PANEL ===================== -->
+
+  <!-- Floating review trigger (top-right corner) -->
+  <button class="review-trigger" id="review-trigger" aria-label="Open reviews and comments" aria-expanded="false" aria-controls="review-panel">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+    <span class="review-trigger-label">Reviews</span>
+    <span class="review-trigger-count" aria-label="3 reviews">3</span>
+  </button>
+
+  <!-- Slide-in review panel -->
+  <aside class="review-panel" id="review-panel" role="dialog" aria-modal="false" aria-label="Reviews and comments" hidden>
+    <div class="review-panel-header">
+      <div>
+        <h2 class="review-panel-title">Reviews &amp; Comments</h2>
+        <p class="review-panel-sub">What our guests are saying</p>
+      </div>
+      <div class="review-panel-actions">
+<button class="review-panel-close" id="review-panel-close" aria-label="Close reviews panel">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Overall rating -->
+    <div class="review-overall">
+      <span class="review-overall-score" id="review-overall-score">4.9</span>
+      <div>
+        <div class="review-overall-stars" aria-label="Overall star rating">★★★★★</div>
+        <p class="review-overall-count" id="review-overall-count">Based on 6 reviews</p>
+      </div>
+    </div>
+
+    <!-- Reviews rendered by JS (sorted: 5★ front at 100%, lower stars layered behind) -->
+    <div class="review-list" id="review-list" aria-label="Guest reviews"></div>
+
+    <!-- Write a review form -->
+    <div class="review-form-section">
+      <h3 class="review-form-title">Leave a Comment</h3>
+      <form class="review-form" id="review-form" novalidate aria-label="Submit a review">
+
+        <div class="review-star-picker" role="group" aria-label="Select your rating">
+          <span class="star-pick" data-value="1" role="radio" aria-checked="false" tabindex="0" aria-label="1 star">★</span>
+          <span class="star-pick" data-value="2" role="radio" aria-checked="false" tabindex="0" aria-label="2 stars">★</span>
+          <span class="star-pick" data-value="3" role="radio" aria-checked="false" tabindex="0" aria-label="3 stars">★</span>
+          <span class="star-pick" data-value="4" role="radio" aria-checked="false" tabindex="0" aria-label="4 stars">★</span>
+          <span class="star-pick" data-value="5" role="radio" aria-checked="false" tabindex="0" aria-label="5 stars">★</span>
+          <input type="hidden" id="review-rating" name="rating" value="" />
+        </div>
+        <span class="form-error" id="review-rating-error" role="alert" aria-live="polite"></span>
+
+        <input type="text" id="review-author" name="author" class="form-input" placeholder="Your name" required aria-required="true" autocomplete="name" />
+        <span class="form-error" id="review-author-error" role="alert" aria-live="polite"></span>
+
+        <textarea id="review-comment" name="comment" class="form-input form-textarea" placeholder="Share your experience…" rows="3" required aria-required="true"></textarea>
+        <span class="form-error" id="review-comment-error" role="alert" aria-live="polite"></span>
+
+        <button type="submit" class="btn btn-primary review-submit">Post Comment</button>
+
+        <div class="form-success" id="review-success" role="alert" aria-live="polite" hidden>
+          <span class="success-icon" aria-hidden="true">✅</span>
+          <div><strong>Thanks for your review!</strong><p>Your comment has been added.</p></div>
+        </div>
+
+      </form>
+    </div>
+  </aside>
+
+  <!-- Panel backdrop -->
+  <div class="review-backdrop" id="review-backdrop" aria-hidden="true" hidden></div>
+
+  <!-- ===================== CART FAB ===================== -->
+  <button class="cart-fab" id="cart-fab" aria-label="Open cart" hidden>
+    <span class="cart-fab-icon" aria-hidden="true">🛒</span>
+    <span class="cart-fab-badge" id="cart-fab-badge">0</span>
+  </button>
+
+  <!-- ===================== CART DRAWER ===================== -->
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Your order" hidden>
+    <div class="cart-drawer-header">
+      <h2 class="cart-drawer-title">Your Order</h2>
+      <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <!-- Items injected by JS -->
+    </div>
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal">
+        <span>Subtotal</span>
+        <span id="cart-subtotal-amount">$0.00</span>
+      </div>
+      <div class="cart-name-field">
+        <label for="cart-customer-name" class="cart-name-label">Your Name <span aria-hidden="true">*</span></label>
+        <input type="text" id="cart-customer-name" class="form-input cart-name-input" placeholder="Enter your name" autocomplete="name" />
+        <span class="form-error" id="cart-name-error" role="alert" aria-live="polite"></span>
+      </div>
+      <button class="btn btn-primary cart-place-order" id="cart-place-order">Place Order</button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cart-backdrop" aria-hidden="true" hidden></div>
+
+  <!-- ===================== ORDER CONFIRMATION MODAL ===================== -->
+  <div class="modal-overlay" id="order-confirm-overlay" role="dialog" aria-modal="true" aria-labelledby="order-confirm-heading" hidden>
+    <div class="modal-box order-confirm-box">
+      <div class="order-confirm-celebrate" aria-hidden="true">🎉</div>
+      <h2 class="order-confirm-heading" id="order-confirm-heading">Order Placed!</h2>
+      <p class="order-confirm-number" id="order-confirm-number">#0000</p>
+      <p class="order-confirm-wait">Estimated wait: ~20 minutes</p>
+      <ul class="order-confirm-list" id="order-confirm-list" aria-label="Order summary"></ul>
+      <button class="btn btn-primary order-play-games" id="order-play-games">Play Games While You Wait →</button>
+      <button class="order-maybe-later" id="order-maybe-later">Maybe Later</button>
+    </div>
+  </div>
+
+  <!-- ===================== GAMES MODAL ===================== -->
+  <div class="modal-overlay games-overlay" id="games-overlay" role="dialog" aria-modal="true" aria-labelledby="games-modal-heading" hidden>
+    <div class="modal-box games-box">
+      <div class="games-header">
+        <h2 class="games-heading" id="games-modal-heading">Games While You Wait</h2>
+        <button class="games-close" id="games-close" aria-label="Close games">✕</button>
+      </div>
+
+      <!-- Tab buttons -->
+      <div class="games-tabs" role="tablist" aria-label="Games">
+        <button class="games-tab active" id="gtab-memory" role="tab" aria-selected="true" aria-controls="gpanel-memory" data-gtab="memory">Memory Match</button>
+        <button class="games-tab" id="gtab-spin" role="tab" aria-selected="false" aria-controls="gpanel-spin" data-gtab="spin">Spin the Wheel</button>
+      </div>
+
+      <!-- Memory Match Panel -->
+      <div class="games-panel active" id="gpanel-memory" role="tabpanel" aria-labelledby="gtab-memory">
+        <div class="memory-stats">
+          <span>Moves: <strong id="memory-moves">0</strong></span>
+          <span>Matches: <strong id="memory-matches">0</strong>/8</span>
+        </div>
+        <div class="memory-grid" id="memory-grid" aria-label="Memory match game grid"></div>
+        <div class="memory-win" id="memory-win" hidden>
+          <div class="memory-win-trophy" aria-hidden="true">🏆</div>
+          <h3 class="memory-win-title">You Won!</h3>
+          <p class="memory-win-sub" id="memory-win-sub">Completed in 0 moves</p>
+          <p class="memory-win-reward">Show this to your server: <strong>Free Dessert! 🍮</strong></p>
+          <button class="btn btn-primary memory-play-again" id="memory-play-again">Play Again</button>
+        </div>
+      </div>
+
+      <!-- Spin the Wheel Panel -->
+      <div class="games-panel" id="gpanel-spin" role="tabpanel" aria-labelledby="gtab-spin" hidden>
+        <div class="spin-container">
+          <div class="spin-pointer" aria-hidden="true">▼</div>
+          <canvas id="spin-canvas" width="300" height="300" aria-label="Prize wheel"></canvas>
+        </div>
+        <button class="btn btn-primary spin-btn" id="spin-btn">Spin!</button>
+        <div class="spin-result" id="spin-result" hidden>
+          <div class="spin-result-emoji" id="spin-result-emoji" aria-hidden="true"></div>
+          <p class="spin-result-prize" id="spin-result-prize"></p>
+          <p class="spin-result-sub">Show this to your server!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
